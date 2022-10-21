@@ -1,1 +1,51 @@
-<p>login works!</p>
+<div class="container">
+    <header class="header">
+        <div class="officelogo">
+        <img src="assets/Robosoft_logo_horizontal.png" height="54px" width="280px" alt="company logo"></div>
+    </header>
+    <div class="login"> 
+        <div class="bg">
+            <mat-card>
+                <mat-card-title>Login</mat-card-title>
+                    <mat-card-content>
+                            <form name ="loginForm" [formGroup]="loginForm">
+                                <div class="form-username">
+                                    <mat-form-field class="layout" appearance ="outline" >
+                                        <mat-label>Enter Username</mat-label>
+                                          <input matInput formControlName="userName">     
+                                    </mat-form-field>
+                                </div>
+                                <div class="form-password">
+                                    <mat-form-field class="layout" appearance ="outline" floatLabel="never">
+                                        <mat-label> Enter password</mat-label>
+                                        <input matInput formControlName="password">
+                                    </mat-form-field>
+                                </div>
+                                <img src="assets/FAB.png"><br>
+                                <span class="forgot-password"><p>Forgot Password?</p></span> 
+                                
+                            </form>
+                    </mat-card-content>
+            </mat-card>
+            </div>
+        </div> 
+        <!-- <form (ngSubmit)="onSignin()" name="signinForm" [formGroup]="signinForm">
+       
+        <div>
+            <span class="forgot-password">Forgot Password?</span> 
+            <mat-form-field class="layout" color="accent" appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input formControlName="password" matInput [type]="hide ?'password':'text'" required/>
+                <button mat-icon-button matSuffix (click)="hide = !hide"
+                [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off':'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="signinForm.get('password')?.hasError('required')">Password required</mat-error>
+        </mat-form-field>
+        </div> 
+        <button mat-raised-button color="accent" (click)="openDialogBox()">Submit </button>
+        </form>
+        </mat-card-content>
+        </mat-card>
+    </div> -->
+</div>
