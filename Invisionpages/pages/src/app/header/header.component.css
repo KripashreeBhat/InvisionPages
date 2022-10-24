@@ -1,0 +1,17 @@
+header .navbar-logo{
+    width:1400px;
+    height:80px;
+    background-color: #FFFFFF;
+   }
+.container{
+    margin:0% 10%;
+    /* width:1400px; */
+   }
+
+   .navbar-logo{
+    margin-left:130px;
+    margin-bottom:1061px;
+    margin-right:1030px;
+    margin-top:20px;
+    
+}

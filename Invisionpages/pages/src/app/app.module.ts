@@ -7,12 +7,16 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmailCheckComponent } from './email-check/email-check.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    routingComponent
+    routingComponent,
+    EmailCheckComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
