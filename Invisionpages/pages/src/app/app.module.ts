@@ -9,6 +9,8 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailCheckComponent } from './email-check/email-check.component';
 import { HeaderComponent } from './header/header.component';
+import { HeaderProfileComponent } from './header-profile/header-profile.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HeaderComponent } from './header/header.component';
     LoginComponent,
     routingComponent,
     EmailCheckComponent,
-    HeaderComponent
+    HeaderComponent,
+    HeaderProfileComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

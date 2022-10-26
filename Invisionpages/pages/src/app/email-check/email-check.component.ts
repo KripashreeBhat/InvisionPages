@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailCheckComponent implements OnInit {
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }
-
+ 
 }
