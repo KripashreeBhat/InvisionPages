@@ -1,40 +1,170 @@
 <div class="bg">
-<app-header-profile></app-header-profile>
-<div class="profile-fill">
-
-
- 
-                 <div class="heading1">
-                     <p>
-                         Your <br />
-                        Quesionnaries
-                             </p>
-                    <div class="newquest">
-                      <button>NEW QUESTIONNAIRE</button>
-                     </div>
-                     
-
-                 </div>
-
-
-
-       <div class="options">
-       
+  <app-header-profile></app-header-profile>
+  <div class="full-form">
+    <div class="profile-fill">
+      <div class="heading1">
+        <p>
+          Your <br />
+          Quesionnaries
+        </p>
+        <div class="newquest">
+          <button>NEW QUESTIONNAIRE</button>
+        </div>
+      </div>
+      <div class="options">
         <button class="secure">Secure coding Guidel...</button>
-        <button class="opt">ISMS Questionnarie <mat-icon >keyboard_arrow_right</mat-icon></button>
-        <button class="opt">PA Questionnarie<mat-icon>keyboard_arrow_right</mat-icon></button>
-        <button class="opt">Process Guidelines<mat-icon>keyboard_arrow_right</mat-icon></button>
-      
-      
-       </div>
-       
- 
+        <button class="opt">
+          ISMS Questionnarie
+          <mat-icon class="one">keyboard_arrow_right</mat-icon>
+        </button>
+        <button class="opt">
+          PA Questionnarie<mat-icon class="two">keyboard_arrow_right</mat-icon>
+        </button>
+        <button class="opt">
+          Process Guidelines<mat-icon class="one"
+            >keyboard_arrow_right</mat-icon
+          >
+        </button>
+      </div>
+    </div>
 
-  <!-- <div class="Quesionnarie-container">
-        <div class="Quesionnarie">
-            <p></p>
+    <div class="Quesionnarie-container">
+      <div class="quesionnarie">
+        <p>Questionnaire</p>
+        <form name="quesionnaire" [formGroup]="quesionnaire">
+          <div class="form-user">
+            <mat-form-field class="layout" appearance="outline">
+              <mat-label>Enter Title</mat-label>
+              <input matInput formControlName="userTitle" />
+            </mat-form-field>
+          </div>
+          <small class="small"> <p>Please enter appropriate title</p> </small>
+
+          <div class="form-description">
+            <mat-form-field
+              class="layout2"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label> Description </mat-label>
+              <input matInput formControlName="description" />
+            </mat-form-field>
+          </div>
+
+          <div class="form-button">
+            <mat-form-field
+              class="layout3"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label> Button Title</mat-label>
+              <input matInput formControlName="btntitle" />
+            </mat-form-field>
+
+            <mat-form-field
+              class="layout4"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label> Button Text</mat-label>
+              <input matInput formControlName="btntext" />
+            </mat-form-field>
+          </div>
+
+          <div class="form-checkbox">
+            <mat-form-field
+              class="layout5"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Check box text </mat-label>
+              <input matInput formControlName="checkbox" />
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+
+      <div class="additional">
+        <p>Additional Details</p>
+        <form name="quesionnaire" [formGroup]="quesionnaire">
+          <div class="form-details">
+            <mat-form-field class="box" appearance="outline" floatLabel="never">
+              <mat-label> Select Start Date </mat-label>
+              <input matInput formControlName="startDate" /><mat-icon
+                class="date"
+                color="accent"
+                >today</mat-icon
+              >
+            </mat-form-field>
+
+            <mat-form-field
+              class="box end"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label> Select End Date </mat-label>
+              <input matInput formControlName="endDate" /><mat-icon
+                class="date"
+                color="accent"
+                >event</mat-icon
+              >
+            </mat-form-field>
+
+            <mat-form-field
+              class="box reminder"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label> Auto Reminder</mat-label>
+              <input matInput formControlName="reminder" />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field
+              class="file"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label> Select Content PPT File </mat-label>
+              <input matInput formControlName="file" /><mat-icon
+                class="date"
+                color="accent"
+                >cloud_upload</mat-icon
+              >
+            </mat-form-field>
+
+            <mat-form-field
+              class="file sheet"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label> Select participant xl sheet</mat-label>
+              <input matInput formControlName="sheet" /><mat-icon
+                class="date"
+                color="accent"
+                >cloud_upload</mat-icon
+              >
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field
+              class="mail"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Mail Body</mat-label>
+              <input matInput formControlName="mail" />
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+
+      <div class="side-opt">
+        <div class="verticle"></div>
+        <div class="button">
 
         </div>
-    </div> -->
-</div>
+      </div>
+    </div>
+  </div>
 </div>

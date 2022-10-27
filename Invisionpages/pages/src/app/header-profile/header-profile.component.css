@@ -1,5 +1,4 @@
 
-
 .container{
   height: 100px;
   width: 1440px;
@@ -8,12 +7,12 @@
   box-shadow: 0 1px 12px 0 rgba(0,0,0,0.14);
   margin-left: 10%;
   display: flex;
+
 }
 .navbar-logo{
     margin-left:130px;
-    margin-bottom:1100px;
     margin-right:1030px;
-    margin-top:30px;
+    margin-top:25px;
 }
 .profile img{
 
@@ -28,10 +27,7 @@
 }
  .profile {
     margin-left: -18.5%;
-    /* width:200px; */
-    /* margin-top: -60px; */
- 
-    display: flex;
+     display: flex;
   
     
 }
