@@ -1,0 +1,19 @@
+.container{
+    height: 44px;
+    width: 1440px;
+    opacity: 0.98;
+    background-color:  rgba(0,0,0,0.02);
+    /* border:1px solid red; */
+    margin-top:500px;
+    margin-left: 10%
+}
+.label{
+    margin-left: 559px;
+    padding-top: 11px;
+    color: rgba(0,0,0,0.6);
+    font-family: Roboto;
+    font-size: 16px;
+    letter-spacing: 0.15px;
+    
+}
+

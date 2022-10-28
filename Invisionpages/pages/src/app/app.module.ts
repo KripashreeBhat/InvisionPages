@@ -11,6 +11,7 @@ import { EmailCheckComponent } from './email-check/email-check.component';
 import { HeaderComponent } from './header/header.component';
 import { HeaderProfileComponent } from './header-profile/header-profile.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
     EmailCheckComponent,
     HeaderComponent,
     HeaderProfileComponent,
-    ProfileComponent
+    ProfileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

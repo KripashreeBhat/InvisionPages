@@ -1,18 +1,15 @@
 
 /* Your Quesionnaries */
 
-.full{
-    margin-top: 10rem;
-}
-
 .profile-fill {
     border:1px solid #fff;
     width: 280px;
     height:476px;
     background-color:#fff;
     border-radius: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 320px;
+    box-shadow: 0px 5px 10px #f4bbca;
 }   
 
 .heading1 {
@@ -92,7 +89,8 @@
 .one {
     font-size:36px;
     position: absolute;
-    padding-left: 1.7rem;
+    /* padding-left: 1.7rem; */
+    padding-left:30%;
     padding-bottom: 15rem;
     margin-top: -0.5rem;
 }   
@@ -100,7 +98,8 @@
 .two {
     font-size:36px;
     position: absolute;
-    padding-left: 2.5rem;
+    /* padding-left: 2.5rem; */
+    padding-left: 37%;
     padding-bottom: 15rem;
     margin-top: -0.5rem;
 }   
@@ -111,14 +110,15 @@
 .Quesionnarie-container {
 
     background-color: #fff;
-    margin-top: -477px;
-    margin-right: 380px;
-    border:#000 1px solid;
+    margin-top: -480px;
+    margin-right: 320px;
+    /* border:#000 1px solid; */
     border-radius: 20px;
     height: 956px;
     width: 880px;
     float: right;
     position: relative;
+    box-shadow: 0px 5px 10px #f4bbca;
     
 }
 
@@ -255,12 +255,52 @@ margin-top:20px;
     height:70px;
 }
 .verticle{
-    border-left: 3px solid #D92756;
-    height:500px;
-    left:70%;
-    margin-top:-800px;
+    border-left: 2px solid #D92756;
+    height:350px;
+    left:71.5%;
+    margin-top:-920px;
     position: absolute;
 }
 .side-opt{
-    
+    height: 351px;
+    width: 230px;
+    margin-left: 630px;
+    margin-top:-920px
+}
+.side-btn{
+    margin-top:0;
+    width:200px;
+    border-radius: 10px;
+    margin-left:2rem;
+    color: #D92756;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+    padding-left:47.17px ;
+
+
+
+}
+.btn-height{
+    margin-top: 15px;
+}
+
+.mat-icon{
+    margin-left:-35px;
+}
+
+.addbtn{
+    border-radius: 200%;
+    width:51px;
+    height:51px;
+    box-shadow: 0px 5px 10px #f4bbca;
+}
+
+.addbtn .mat-icon{
+    margin:auto;
+}
+.addbutton{
+    margin-left:807px;
+    margin-top:507px;
+    padding-bottom: 25px;
 }
