@@ -4,7 +4,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 const MaterialComponent =[
@@ -12,7 +13,9 @@ const MaterialComponent =[
   MatInputModule,
   MatButtonModule,
   MatFormFieldModule,
-  MatIconModule
+  MatIconModule,
+  MatDialogModule,
+  MatCheckboxModule
 
 ]
 

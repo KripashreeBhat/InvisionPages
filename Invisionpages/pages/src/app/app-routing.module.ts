@@ -1,13 +1,18 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { EmailCheckComponent } from './email-check/email-check.component';
 import { LoginComponent } from './login/login.component';
+import { PptComponent } from './ppt/ppt.component';
 import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path : " ",redirectTo:'/login', pathMatch:'full'},
   { path : "login", component:LoginComponent},
   { path : "email", component: EmailCheckComponent},
-  { path: "profile", component:ProfileComponent}
+  { path: "profile", component:ProfileComponent},
+  { path: "changepassword", component:ChangepasswordComponent},
+  { path: "ppt", component:PptComponent}
 ];
 
 @NgModule({
@@ -17,5 +22,8 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponent =[
   LoginComponent,
-  EmailCheckComponent
+  EmailCheckComponent,
+  ProfileComponent,
+  ChangepasswordComponent,
+  PptComponent
 ]

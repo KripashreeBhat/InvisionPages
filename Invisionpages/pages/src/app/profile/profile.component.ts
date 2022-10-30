@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms'
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { AdminAddComponent } from '../admin-add/admin-add.component';
+import { AdminComponent } from '../admin/admin.component';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -8,7 +11,8 @@ import { FormBuilder, FormGroup } from '@angular/forms'
 export class ProfileComponent implements OnInit {
   quesionnaire! : FormGroup;
   // additional! : FormGroup;
-  constructor(private fb : FormBuilder) { }
+  display=false;
+  constructor(private fb : FormBuilder, private dialog : MatDialog ) { }
  get form(){
   return this.quesionnaire.get;
  }
@@ -36,5 +40,25 @@ export class ProfileComponent implements OnInit {
     //   mail:['']
     // })
   }
+  displayclose(){
+   this.display=true;
+   
+  }
+  displayadd(){
+    this.display=false;
+  }
 
+  openDialog(){
+    this.dialog.open(AdminComponent,
+  {
+    panelClass: 'my-class'  // Add a custom panel class
+  });
+  }
+
+  opensecDialog(){
+    this.dialog.open(AdminAddComponent,{
+      panelClass: 'my-class'
+
+    });
+  }
 }

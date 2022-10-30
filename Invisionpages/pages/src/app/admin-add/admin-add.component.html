@@ -1,0 +1,85 @@
+<div class="container">
+    <mat-icon class="close" routerLink="/profile">close</mat-icon>
+    <div class="add">
+    <p class="title">Add/Remove Admins</p>
+</div>
+     <form name="addadmin" [formGroup]="addadmin">
+        <mat-form-field class="layout namelayout" appearance="outline">
+            <input matInput formControlName="name" placeholder="Enter Name">
+        </mat-form-field>
+
+        <mat-form-field class="layout" appearance="outline">
+            <input matInput formControlName="code" placeholder="Enter Employee Code">
+        </mat-form-field>
+
+        <mat-form-field class="maillayout" appearance="outline">
+            <input matInput formControlName="mail" placeholder="Enter Mail ID">
+        </mat-form-field>
+
+        <div class="btn">
+            <button mat-fab >
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+
+          <hr class="line">
+
+          <mat-form-field class="layout namelayout" appearance="outline">
+              <input matInput formControlName="namefill1" >
+            </mat-form-field>
+    
+            <mat-form-field class="layout" appearance="outline">
+                <input matInput formControlName="code1" >
+            </mat-form-field>
+           
+
+            <mat-form-field class="maillayout" appearance="outline">
+                <input matInput formControlName="mail1" > 
+            </mat-form-field>
+
+
+        <div class="btn">
+            <button mat-fab >
+              <mat-icon class="icon">edit</mat-icon>
+            </button>
+            <button mat-fab class="spacebwbtn" >
+                <mat-icon >delete</mat-icon>
+              </button>
+          </div>
+
+          <!-- second input field -->
+          <mat-form-field class="layout namelayout" appearance="outline">
+            <input matInput formControlName="namefill2" >
+          </mat-form-field>
+  
+          <mat-form-field class="layout" appearance="outline">
+              <input matInput formControlName="code2" >
+          </mat-form-field>
+         
+
+          <mat-form-field class="maillayout" appearance="outline">
+              <input matInput formControlName="mail2" > 
+          </mat-form-field>
+
+
+      <div class="btn">
+          <button mat-fab >
+            <mat-icon class="icon">edit</mat-icon>
+          </button>
+          <button mat-fab class="spacebwbtn" >
+              <mat-icon >delete</mat-icon>
+            </button>
+        </div>
+     </form>
+   
+
+     
+     <div class="downbtn update">
+         <button  class="label"> Update</button>
+         
+        </div>
+        <div class=" downbtn spacebtn">
+            <button  class="label " routerLink="/profile"> Cancel </button>
+            
+        </div>
+    </div>

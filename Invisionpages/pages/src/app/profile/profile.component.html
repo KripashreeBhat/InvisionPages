@@ -1,4 +1,5 @@
-<div class="bg">
+
+  <div class="bg">
   <app-header-profile></app-header-profile>
   <div class="full-form">
     <div class="profile-fill">
@@ -170,9 +171,23 @@
 
         </div>
       </div>
-
+      
       <div class="addbutton">
-        <button class="addbtn"><mat-icon>add</mat-icon></button>
+        
+        <button class="addbtn"  *ngIf="display ;else elseBlock" (click)="displayadd()"> <div class="close"><mat-icon>close</mat-icon></div>
+          <div class="pop" >
+          <ng-container>
+            <button class="popbtn " routerLink="/changepassword">Change Password</button>
+            <button class="popbtn" (click)="openDialog()">Add/Remove Super Admins</button>
+            <button class="popbtn " (click)="opensecDialog()">Add/Remove Admins</button>
+          </ng-container>
+        </div>
+        </button>
+
+
+        <ng-template #elseBlock>
+          <button class="addbtn"><mat-icon  (click)="displayclose()">add</mat-icon></button>
+        </ng-template>
       </div>
     </div>
   </div>

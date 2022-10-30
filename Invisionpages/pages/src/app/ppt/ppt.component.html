@@ -1,0 +1,44 @@
+
+<div class="container">
+   <img src="/assets/background.png" alt="background image">
+   </div>
+   <div class="header">
+    <div class="header-profile">
+       <img src="/assets/profileppt.png" alt="profile pic">
+       <p class="profile-info">Karthik<br></p>
+       <p class="number">RT Number : RT005685</p>
+    </div>
+
+    <div class="header-training">
+        <p class="training">ISMS training</p><br>
+    </div>
+    <p class="disc">Description of why these terms and conditions are necessary.</p>
+    
+    <div class="header-robologo">
+        <img src="assets/Robosoft_logo_horizontal.png" alt="Robosoft-logo">
+    </div>
+
+    <div class="pptpic">
+        <img src="assets/pptslide.PNG" alt="slide pic">
+    </div>
+
+    <div class="terms">
+        <div class="thank">
+        <mat-checkbox class="thankyou-margin mat-checkbox-background" *ngIf="checked" [(ngModel)]="checked"  (click)="nothankyou()" >Thank you for accepting Terms & Condotions  <mat-icon class="iconsize">close</mat-icon> </mat-checkbox>
+       
+    </div>
+        <ng-container >
+            <div class="terms-section">
+                <mat-checkbox
+                class="terms-margin" (click)="thankyou()" >I have read all the Terms and Conditions
+            </mat-checkbox>
+        </div>
+    </ng-container>
+</div>
+<p class="agree">By clicking the 'I Agree' button you here by afree to follow all the guidlines mentioned above</p>
+<button> I Agree</button>
+<p class="footer">
+Robosoft Technologies 1996-2020
+</p>
+</div>
+

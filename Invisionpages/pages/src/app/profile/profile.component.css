@@ -294,6 +294,7 @@ margin-top:20px;
     width:51px;
     height:51px;
     box-shadow: 0px 5px 10px #f4bbca;
+    cursor:pointer;
 }
 
 .addbtn .mat-icon{
@@ -304,3 +305,36 @@ margin-top:20px;
     margin-top:507px;
     padding-bottom: 25px;
 }
+
+.popbtn{
+    height: 33.6px;
+    width: 194.6px;
+    background-color: #FDF4F6;
+    color:#D92756;
+    font-family: Roboto;
+    font-size: 9.8px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+    /* line-height: 11.2px; */
+    text-align: center;
+    margin-bottom:12px;
+    box-shadow: 0px 5px 10px #f4bbca;
+    cursor: pointer;
+}   
+
+.pop{
+    /* border: #000 1px solid; */
+    /* height: 170px; */
+    /* width: 196px; */
+    margin-left:-150px;
+    margin-top:-245px;
+    padding-top: 25px;
+
+  
+}
+
+.close{
+    margin:auto;
+    margin-top:-0.75rem;
+}
+

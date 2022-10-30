@@ -1,0 +1,145 @@
+.container img{
+    height: 986px;
+    width: 1919px;
+    /* opacity: 0.8; */
+}
+/* HEADER */
+/* HEADER PROFILE */
+.header-profile{
+    /* border: 1px solid black; */
+    height: 80px;
+    width: 284px;
+    color: black;
+    margin-top:-945px;
+    margin-left: 141px;
+}
+.header-profile img{
+    border-radius: 50%;
+    height:80px;
+    width:90px;
+}
+
+.profile-info{
+    /* color: #575757; */
+
+    font-family: Inter;
+    font-size: 24px;
+    line-height: 31px;
+    margin-left:90px;
+    margin-top: -80px;
+    font-family: roboto;
+}
+.number{
+   margin-left:90px;
+   font-size: 18px; 
+   font-weight: 400;
+}
+
+.header-training{
+    height: 93px;
+    width: 532px;
+    margin-left: 693px;
+    margin-top:-85px;
+}
+.training{
+    color: #000000;
+    font-family: roboto;
+    font-size: 50px;
+    margin-left: 110px;
+    margin-top: 10px;
+    font-weight: 800;
+}
+.disc{
+    font-size: 19.5px;
+    margin-left:693px;
+    margin-top: -40px;
+}
+.header-robologo{
+    margin-left:1494px;
+    margin-top: -85px;
+}
+.pptpic img{
+    margin-left:538px;
+    margin-top:101px
+}
+ .thankyou-margin{
+    /* border:1px solid black; */
+    height: 60px;
+    width: 522px;
+    border-radius: 4px;
+    position: relative;
+    background-color: #36B834;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.22);
+    opacity: 0.2;
+   
+  
+}
+
+.thank{
+    /* font-weight: 800; */
+    position:absolute;
+    margin-left:693px;
+    margin-top: -273px;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    
+}
+
+
+.mat-icon{
+    font-size: 30px;
+    font-weight: 800;
+    color: #f00;
+    text-align:end;
+    /* margin-top: 16px;  */
+}
+.iconsize{
+  margin-left: 70px;
+}
+
+/* mat-checkbox {
+    color: rgb(0,178,0); */
+     /* .mat-checkbox-background {
+        background-color: rgb(0,178,0);
+    }
+
+    .mat-checkbox-focused .mat-ink-ripple
+        {
+            background-color: rgba(0, 178, 0, .26);
+        }
+     */
+
+.terms-section{
+    margin-left:781px;
+    margin-top:35px;
+    font-size: 18px;
+    color: #575757;;
+}
+
+.agree{
+    font-size: 16px;
+    margin-left:604px;
+    margin-top: 26px;
+    font-style: roboto;
+}
+button{
+    height: 45px;
+    width: 233px;
+    background-color: #D92756;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 843px;
+    border: none;
+    margin-top: 24px;
+    cursor: pointer;
+    font-style: roboto;
+
+}
+.footer{
+    font-size: 15.3px;
+    margin-left: 843px;
+    color:  #959595;
+    margin-top: 71px;
+
+}
