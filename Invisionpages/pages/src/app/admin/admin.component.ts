@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormArray, FormControl, FormGroup} from '@angular/forms';
+import { ServicesService } from '../services.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -7,7 +8,7 @@ import { FormBuilder, FormArray, FormControl, FormGroup} from '@angular/forms';
 })
 export class AdminComponent implements OnInit {
   addadmin!:FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private service: ServicesService) { }
   get form(){
     return this.addadmin.get
   }
@@ -16,6 +17,7 @@ export class AdminComponent implements OnInit {
       name :[''],
       code: [''],
       mail:[''],
+
       namefill1:['Kevin'],
       namefill2:['John'],
       code1:['RT12345'],
@@ -25,5 +27,9 @@ export class AdminComponent implements OnInit {
 
     })
   }
+  addAdmin(){
+    const superAdmin = { name: this.addadmin.get('name')?.value, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
+    this.service.postadmin(superAdmin).subscribe();
 
+}
 }

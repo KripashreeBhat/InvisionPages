@@ -17,7 +17,7 @@
         </mat-form-field>
 
         <div class="btn">
-            <button mat-fab >
+            <button mat-fab (click)="addAdmin()" >
               <mat-icon>add</mat-icon>
             </button>
           </div>
@@ -75,11 +75,11 @@
 
      
      <div class="downbtn update">
-         <button  class="label"> Update</button>
+         <button  class="label"  mat-dialog-close> Update</button>
          
         </div>
         <div class=" downbtn spacebtn">
-            <button  class="label " routerLink="/profile"> Cancel </button>
+            <button  class="label " mat-dialog-close> Cancel </button>
             
         </div>
     </div>
