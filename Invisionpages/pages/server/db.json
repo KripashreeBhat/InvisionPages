@@ -6,34 +6,17 @@
       "id": 1
     },
     {
-      "password": "kannika",
+      "password": "kripa",
       "name": "kripa",
       "id": 2
-    },
-    {
-      "password": "0512",
-      "name": "roopa",
-      "id": 3
     }
   ],
   "admin": [
     {
       "name": "kripa",
-      "empcode": "0512",
-      "email": "kripa",
-      "id": 1
-    },
-    {
-      "name": "kripa",
-      "empcode": "0512",
-      "email": "kripa",
+      "empcode": "12345",
+      "email": "kripa@gmail.com",
       "id": 2
-    },
-    {
-      "name": "kripa",
-      "empcode": "0512",
-      "email": "kripa",
-      "id": 3
     }
   ]
 }

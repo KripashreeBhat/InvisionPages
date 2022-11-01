@@ -1,64 +1,55 @@
+/* body{
+  height:100vh;
 
-.header{
- width:1400px;
- height:80px;
- background-color: #FFFFFF;
-}
-
-.officelogo{
-    margin-left:130px;
-    margin-bottom:1061px;
-    margin-right:1030px;
-    margin-top:20px;
-    
-}
-img{
-  cursor: pointer;
-  margin-bottom:0%
-}
+} */
 
 .container{
-    background-image: linear-gradient(52.03deg,#7A7FC8 0%, #BD385B 100%);
-    /* width:100%; */
-    height: 1138px;
-    width:1400px;
-    margin:0% 10%;
-};
-
-.bg mat-card{
-    /* margin-top:30%; */
-    /* margin-bottom: 377px;
-    margin-left:452px;
-    margin-right:457px;
-    width: 535px; */
+  background-image: linear-gradient(52.03deg,#7A7FC8 0%, #BD385B 100%);
+  /* width:100%; */
+  height: 100vh;
+  width:1400px;
+  margin:0% 10%;
 }
-mat-card{
+
+  mat-card{
     max-width: 35%;
-    margin:5rem auto;
+    margin:-15rem auto;
     text-align:center;
     max-height:1000px;
     border-radius: 20px;
     background-color: #FFFFFF;
     /* padding: 10rem 0; */
+  }
+mat-card-title{
+  text-align: center;
+  margin-left:45%;
+  margin-bottom:5%;
+  padding-top:5%;
+  /* height: 29px; */
+  width: 64px;
+  color: #000000;
+  font-family: Inter;
+  font-size: 200%;
+  font-weight: 500;
+  /* letter-spacing: 0; */
+  line-height: 29px;
 }
-.login .bg mat-card{
-    /* margin-top:20%; */
-}
-.layout{
-    width:70%;
-    /* padding: top 10%; */
 
+.layout{
+  width:70%;
+  /* padding: top 10%; */
+  
+}
+img{
+  cursor: pointer;
+  margin-bottom:0%
 }
 .forgot-password {
-    height: 14px;
-    width: 97px;
-    opacity: 0.8;
+  opacity: 0.8;
     color: #000000;
     font-family: Roboto;
     font-size: 12px;
-    letter-spacing: 0;
-    line-height: 0px;
-    text-align: center;
+    /* text-align: center; */
     padding-top: 0;
     margin-top: 0%;
     cursor: pointer;
@@ -67,21 +58,49 @@ mat-card{
     text-align: center;
     margin-top: -30px;
   }
-  mat-card-title{
-    text-align: center;
-    margin-left:45%;
-    margin-bottom:5%;
-    padding-top:5%;
-    height: 29px;
-    width: 64px;
-    color: #000000;
-    font-family: Inter;
-    font-size: 200%;
-    font-weight: 500;
-    /* letter-spacing: 0; */
-    line-height: 29px;
-  }
+ 
   .bg{
     margin-top:25%;
+
+  }
+
+  /* Responsive wrt width below 500px */
+
+  @media(max-width:500px){
+    body{
+      height: 100vh;
+    }
+    
+    .container{
+      width:95%;
+      height: 80vh;
+      margin:0% 5%;
+    }
+
+    mat-card{
+      max-width: 50%;
+      margin:-3rem auto;
+      text-align:center;
+      max-height:50vh;
+      
+  }
+  mat-card-title{
+    margin-left:25%;
+    font-size: 180%;
+  }
+  .layout{
+    width:80%;
+}
+img{
+  margin-top: -1.5rem;
+  margin-left: -0.5rem;
+  width:50%;
+}
+.forgot-password p{
+  text-align: center;
+  margin-top: -1rem;
+  font-size: 10px;
+}
+
 
   }

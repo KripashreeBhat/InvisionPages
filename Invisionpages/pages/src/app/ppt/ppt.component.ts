@@ -14,7 +14,5 @@ export class PptComponent implements OnInit {
  thankyou(){
   this.checked=true;
  }
- nothankyou(){
-  this.checked=false;
- }
+ 
 }

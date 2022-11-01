@@ -1,5 +1,5 @@
 <div class="container">
-    <mat-icon class="close" routerLink="/profile">close</mat-icon>
+    <mat-icon class="close"mat-dialog-close>close</mat-icon>
     <div class="add">
     <p class="title">Add/Remove Super Admins</p>
 </div>
@@ -23,32 +23,42 @@
           </div>
 
           <hr class="line">
+          </form>
 
+          <form>
+          <ng-container *ngFor="let detail of empDetail" >
           <mat-form-field class="layout namelayout" appearance="outline">
-              <input matInput formControlName="namefill1" >
+              <input matInput formControlName= "name"  > {{detail.name}}
+              
             </mat-form-field>
     
             <mat-form-field class="layout" appearance="outline">
-                <input matInput formControlName="code1" >
+                <input matInput formControlName= "code" >{{detail.empcode}}
+                
             </mat-form-field>
            
 
             <mat-form-field class="maillayout" appearance="outline">
-                <input matInput formControlName="mail1" > 
+                <input matInput formControlName= "email" > {{detail.email}}
+               
             </mat-form-field>
 
 
         <div class="btn">
             <button mat-fab >
-              <mat-icon class="icon">edit</mat-icon>
+              <mat-icon (click)="edit(detail)" class="icon">edit</mat-icon>
+              <!-- <mat-icon class="icon">edit</mat-icon> -->
+            
             </button>
             <button mat-fab class="spacebwbtn" >
-                <mat-icon >delete</mat-icon>
+                <mat-icon (click)="deleteAdmin(detail)" >delete</mat-icon>
+                <!-- <mat-icon>delete</mat-icon> -->
+                
               </button>
           </div>
-
+        </ng-container>
           <!-- second input field -->
-          <mat-form-field class="layout namelayout" appearance="outline">
+          <!-- <mat-form-field class="layout namelayout" appearance="outline">
             <input matInput formControlName="namefill2" >
           </mat-form-field>
   
@@ -70,16 +80,17 @@
               <mat-icon >delete</mat-icon>
             </button>
         </div>
-     </form>
-   
-
-     
-     <div class="downbtn update">
-         <button  class="label"  mat-dialog-close> Update</button>
-         
-        </div>
-        <div class=" downbtn spacebtn">
-            <button  class="label " mat-dialog-close> Cancel </button>
+         -->
+        
+        
+        <div class="downbtn update">
+            <button   class="label"  mat-dialog-close> Cancel</button>
             
         </div>
+        <div class=" downbtn spacebtn">
+            <button (click)='editAdmin()' class="label " > Update </button>
+            
+        </div>
+    
+</form> 
     </div>

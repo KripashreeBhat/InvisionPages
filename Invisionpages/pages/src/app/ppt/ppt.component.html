@@ -24,16 +24,16 @@
 
     <div class="terms">
         <div class="thank">
-        <mat-checkbox class="thankyou-margin mat-checkbox-background" *ngIf="checked" [(ngModel)]="checked"  (click)="nothankyou()" >Thank you for accepting Terms & Condotions  <mat-icon class="iconsize">close</mat-icon> </mat-checkbox>
+      <mat-checkbox class="thankyou-margin" *ngIf="checked" [(ngModel)]="checked">Thank you for accepting Terms & Condotions  <mat-icon class="iconsize">close</mat-icon> </mat-checkbox>
        
     </div>
-        <ng-container >
+        <!-- <ng-container > -->
             <div class="terms-section">
                 <mat-checkbox
                 class="terms-margin" (click)="thankyou()" >I have read all the Terms and Conditions
             </mat-checkbox>
         </div>
-    </ng-container>
+    <!-- </ng-container> -->
 </div>
 <p class="agree">By clicking the 'I Agree' button you here by afree to follow all the guidlines mentioned above</p>
 <button> I Agree</button>

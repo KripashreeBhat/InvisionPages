@@ -12,6 +12,8 @@ interface admin extends Array <admin[]>{
   name:string;
   empcode:string;
   email:string;
+  id:number;
+ 
 }
 @Injectable({
   providedIn: 'root'
@@ -30,5 +32,18 @@ export class ServicesService {
 
   postadmin(data:any):Observable<admin[]>{
     return this.http.post<admin[]>('http://localhost:3000/admin',data);
+} 
+
+getAdmin():Observable<admin[]>{
+  return this.http.get<admin[]>('http://localhost:3000/admin');
 }
+
+   putAdmin(data:any,id:number):Observable<admin[]>{
+    return this.http.put<admin[]>('http://localhost:3000/admin/'+id,data);
+  } 
+   
+  deleteAdmin(id:number):Observable<admin[]>{
+    return this.http.delete<admin[]>('http://localhost:3000/admin/'+id)
+  }
+
 }

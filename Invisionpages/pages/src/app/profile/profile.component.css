@@ -1,5 +1,9 @@
 
 /* Your Quesionnaries */
+.bg {
+    background-color:#F7F7F7;
+    height: 120vh;
+}
 
 .profile-fill {
     border:1px solid #fff;
@@ -77,10 +81,7 @@
     border-radius: 0px;
 }
 
-.bg {
-    background-color:#F7F7F7;
-    height: 2000px;
-}
+
 
 .newquest button {
     box-shadow: 0px 5px 10px #f4bbca;
