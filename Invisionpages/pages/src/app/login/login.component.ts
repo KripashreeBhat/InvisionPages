@@ -3,6 +3,7 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 // import { HttpClient } from '@angular/common/http';
 import { ServicesService } from '../services.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,6 +13,9 @@ export class LoginComponent implements OnInit {
   // public hide=true;
   loginForm!: FormGroup;
   login=false;
+  // encryptedMessage!: string;
+  // decryptedMessage!: string;
+
   constructor(
     private fb: FormBuilder,
     private service: ServicesService,
@@ -28,7 +32,11 @@ export class LoginComponent implements OnInit {
     });
   }
 
+    
   successlogin() {
+
+    // console.log(this.loginForm.get('userName')?.value);
+    
     this.service.getUser().subscribe((data) => {
       let len = data.length;
       for (let i = 0; i < len; i++) {

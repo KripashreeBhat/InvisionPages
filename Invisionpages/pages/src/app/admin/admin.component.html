@@ -24,63 +24,44 @@
 
           <hr class="line">
           </form>
-
-          <form>
+          
+          <!-- <form >
           <ng-container *ngFor="let detail of empDetail" >
           <mat-form-field class="layout namelayout" appearance="outline">
-              <input matInput formControlName= "name"  > {{detail.name}}
+              <input matInput formControlName= "name"  > 
+              {{decrypt}}
               
             </mat-form-field>
     
             <mat-form-field class="layout" appearance="outline">
-                <input matInput formControlName= "code" >{{detail.empcode}}
+                <input matInput formControlName= "code" >
+                {{detail.empcode}}
+                
                 
             </mat-form-field>
            
 
             <mat-form-field class="maillayout" appearance="outline">
-                <input matInput formControlName= "email" > {{detail.email}}
+                <input matInput formControlName= "email" > 
+                {{detail.email}}
                
             </mat-form-field>
 
 
         <div class="btn">
             <button mat-fab >
-              <mat-icon (click)="edit(detail)" class="icon">edit</mat-icon>
-              <!-- <mat-icon class="icon">edit</mat-icon> -->
+              <mat-icon   (click)="edit(detail)"class="icon">edit</mat-icon>
+              
             
             </button>
             <button mat-fab class="spacebwbtn" >
-                <mat-icon (click)="deleteAdmin(detail)" >delete</mat-icon>
-                <!-- <mat-icon>delete</mat-icon> -->
+                <mat-icon (click)="deleteAdmin(detail)">delete</mat-icon>
+                
                 
               </button>
           </div>
         </ng-container>
-          <!-- second input field -->
-          <!-- <mat-form-field class="layout namelayout" appearance="outline">
-            <input matInput formControlName="namefill2" >
-          </mat-form-field>
-  
-          <mat-form-field class="layout" appearance="outline">
-              <input matInput formControlName="code2" >
-          </mat-form-field>
-         
-
-          <mat-form-field class="maillayout" appearance="outline">
-              <input matInput formControlName="mail2" > 
-          </mat-form-field>
-
-
-      <div class="btn">
-          <button mat-fab >
-            <mat-icon class="icon">edit</mat-icon>
-          </button>
-          <button mat-fab class="spacebwbtn" >
-              <mat-icon >delete</mat-icon>
-            </button>
-        </div>
-         -->
+          
         
         
         <div class="downbtn update">
@@ -90,7 +71,9 @@
         <div class=" downbtn spacebtn">
             <button (click)='editAdmin()' class="label " > Update </button>
             
-        </div>
+        </div> -->
     
-</form> 
+          <!-- </form>  -->
+
+
     </div>

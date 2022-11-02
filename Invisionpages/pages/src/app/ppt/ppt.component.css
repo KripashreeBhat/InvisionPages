@@ -65,17 +65,20 @@
 }
  .thankyou-margin{
     /* border:1px solid black; */
-    height: 60px;
+    height: 35px;
     width: 522px;
     padding-top: -2rem;
     border-radius: 4px;
     position: relative;
     background-color: #36B834; 
     opacity: 0.2;
-    padding-top:1rem;
+    padding-top:0.2rem;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.22);
     
     
+}
+.terms{
+    z-index:1;
 }
 /* .thankyou-margin::before{
     height: 60px;
@@ -90,7 +93,7 @@
     
 } */
 .thank{
-    font-weight: 800;
+    /* font-weight: 800; */
     position:absolute;
     margin-left:693px;
     margin-top: -273px;
