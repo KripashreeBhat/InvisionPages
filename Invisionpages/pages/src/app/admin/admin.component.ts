@@ -4,6 +4,7 @@ import { ServicesService } from '../services.service';
 import { Router } from '@angular/router';
 // import { NgForm } from '@angular/forms';
 import * as crypt from 'crypto-js'
+import { LiteralPrimitive } from '@angular/compiler';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -14,10 +15,11 @@ export class AdminComponent implements OnInit {
   addadminarray!:FormArray;
   empDetail:any;
   display=false;
-  message: any;
+  key: any;
   encrypt :any;
   decrypt :any;
-  name:any;
+  name!:any;
+  log =false;
  
   constructor(private fb: FormBuilder, private service: ServicesService, private route:Router) { }
   get form(){
@@ -39,21 +41,28 @@ export class AdminComponent implements OnInit {
   encryptt(){
     
     this.name=this.addadmin.get('name')?.value;
-    this.message=this.addadmin.get('mail')?.value;
-    this.encrypt = crypt.AES.encrypt( this.name.trim(),this.message.trim()).toString();
+    this.key=this.addadmin.get('mail')?.value;
+    
+    this.encrypt = crypt.AES.encrypt( this.name.trim(),this.key.trim()).toString();
+    this.decrypt = crypt.AES.decrypt( this.encrypt,this.key.trim()).toString(crypt.enc.Utf8);
+
     console.log(this.encrypt);
-  }
-  decryptt(){
-    this.decrypt = crypt.AES.decrypt( this.encrypt,this.message.trim()).toString(crypt.enc.Utf8);
     console.log(this.decrypt);
-   
+    
   }
+  // decryptt(){
+    
+  //   this.key=this.addadmin.get('mail')?.value;
+  //   this.decrypt = crypt.AES.decrypt( this.encrypt,this.key.trim()).toString(crypt.enc.Utf8);
+  //   console.log(this.decrypt);
+   
+  // }
   
   // post
   addAdmin(){
     this.encryptt();
     // console.log(this.encrypt);
-    this.decryptt();
+    // this.decryptt();
     // console.log(this.decrypt);
     
    
@@ -62,10 +71,12 @@ export class AdminComponent implements OnInit {
       alert('successfully added')
       // this.addadmin.reset();
     },err=>{alert('Something went wrong, try again!')});
+    this.getAllEmpDetail();
   }
 
   edit(detail:any){
-    this.decryptt();
+    this.encryptt();
+    // this.decryptt();
     this.empDetail.id=detail.id;
     this.addadmin.controls['name'].setValue(detail.name);
     this.addadmin.controls['code'].setValue(detail.empcode)
@@ -75,16 +86,17 @@ export class AdminComponent implements OnInit {
 
   // put updated information
   editAdmin(){
-    this.decryptt();
-    console.log(this.decrypt);
+    // this.encryptt();
+    // this.decryptt();
+    // console.log(this.decrypt);
     
     this.getAllEmpDetail();
-   const updateAdmin ={ name : this.decrypt, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
+    const updateAdmin ={ name : this.decrypt, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
     this.service.putAdmin(updateAdmin,this.empDetail.id).subscribe(data=>{
-      alert("successfully updated!!")
-
+    alert("successfully updated!!")
+      this.getAllEmpDetail();
     });
-    // this.getAllEmpDetail();
+    
   }
   // delete
     deleteAdmin(detail: any){
@@ -92,23 +104,43 @@ export class AdminComponent implements OnInit {
       this.service.deleteAdmin(detail.id)
       .subscribe(data=>{
       alert("Are you sure ?");
+      this.getAllEmpDetail();
     }
     
     );
-    this.getAllEmpDetail();
+  
   }
     
   // get
     getAllEmpDetail(){
       this.service.getAdmin().subscribe(data=>{
-        
-        this.empDetail=data;
-        
-              })
-            }
-          }
-        
        
+        this.empDetail=data;
+        this.encryptt();
+      //   for(let i=0;i<data.length;i++){
+      //     if(this.addadmin.get('mail')?.value==data[i].email){
+          
+      //     this.log=true;
+      //     }
+      //   }
+      //     if(this.log){
+            
+      //       this.service.postadmin(data).subscribe(res=>{
+      //         console.log(this.encryptt());
+      //       })
+      //     }
+      //     else{
+      //       console.log('error');
+      //    }
+      //    this.empDetail=data;
+      // });
+          
+         })
+
+        }
+        
+        
+      }
         
 
 

@@ -24,26 +24,25 @@
 
           <hr class="line">
           </form>
-          
-          <!-- <form >
-          <ng-container *ngFor="let detail of empDetail" >
+          <!-- Display section -->
+          <div *ngFor="let detail of empDetail" >
           <mat-form-field class="layout namelayout" appearance="outline">
-              <input matInput formControlName= "name"  > 
-              {{decrypt}}
+              <input matInput  value="{{decrypt}}"  > 
+              
               
             </mat-form-field>
     
             <mat-form-field class="layout" appearance="outline">
-                <input matInput formControlName= "code" >
-                {{detail.empcode}}
+                <input matInput  value="{{detail.empcode}}">
+                
                 
                 
             </mat-form-field>
            
 
             <mat-form-field class="maillayout" appearance="outline">
-                <input matInput formControlName= "email" > 
-                {{detail.email}}
+                <input matInput  value=" {{detail.email}}"> 
+               
                
             </mat-form-field>
 
@@ -60,7 +59,7 @@
                 
               </button>
           </div>
-        </ng-container>
+        </div>
           
         
         
@@ -71,9 +70,9 @@
         <div class=" downbtn spacebtn">
             <button (click)='editAdmin()' class="label " > Update </button>
             
-        </div> -->
+        </div> 
     
-          <!-- </form>  -->
+          
 
 
     </div>
