@@ -3,6 +3,7 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 // import { HttpClient } from '@angular/common/http';
 import { ServicesService } from '../services.service';
 import { Router } from '@angular/router';
+import { PermissionGuard } from '../permission.guard';
 
 @Component({
   selector: 'app-login',
@@ -30,13 +31,18 @@ export class LoginComponent implements OnInit {
       userName: [''],
       password: [''],
     });
+
+   
+    
   }
 
     
   successlogin() {
-
-    // console.log(this.loginForm.get('userName')?.value);
+   
+    console.log(this.service.isLogedIn());
     
+    localStorage.setItem('name',JSON.stringify( this.loginForm.get('userName')?.value));
+    localStorage.setItem('password',JSON.stringify( this.loginForm.get('password')?.value));
     this.service.getUser().subscribe((data) => {
       let len = data.length;
       for (let i = 0; i < len; i++) {
@@ -51,6 +57,9 @@ export class LoginComponent implements OnInit {
          
       }
       if(this.login){
+        
+        // this.service.isLogedIn();
+        
         this.router.navigateByUrl('/profile');
       }
         

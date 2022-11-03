@@ -44,19 +44,19 @@ export class AdminComponent implements OnInit {
     this.key=this.addadmin.get('mail')?.value;
     
     this.encrypt = crypt.AES.encrypt( this.name.trim(),this.key.trim()).toString();
-    this.decrypt = crypt.AES.decrypt( this.encrypt,this.key.trim()).toString(crypt.enc.Utf8);
+    // this.decrypt = crypt.AES.decrypt( this.encrypt,this.key.trim()).toString(crypt.enc.Utf8);
 
     console.log(this.encrypt);
-    console.log(this.decrypt);
+    // console.log(this.decrypt);
     
   }
-  // decryptt(){
+  decryptt(msg:any){
     
-  //   this.key=this.addadmin.get('mail')?.value;
-  //   this.decrypt = crypt.AES.decrypt( this.encrypt,this.key.trim()).toString(crypt.enc.Utf8);
-  //   console.log(this.decrypt);
+    this.key=this.addadmin.get('mail')?.value;
+     this.decrypt=crypt.AES.decrypt( this.encrypt,this.key.trim()).toString(crypt.enc.Utf8);
+    console.log(this.decrypt);
    
-  // }
+  }
   
   // post
   addAdmin(){
@@ -69,32 +69,32 @@ export class AdminComponent implements OnInit {
     const superAdmin = { name: this.encrypt, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
     this.service.postadmin(superAdmin).subscribe(data=>{
       alert('successfully added')
-      // this.addadmin.reset();
+      this.addadmin.reset();
+      this.getAllEmpDetail();
     },err=>{alert('Something went wrong, try again!')});
-    this.getAllEmpDetail();
+   
   }
 
   edit(detail:any){
     this.encryptt();
     // this.decryptt();
-    this.empDetail.id=detail.id;
+    this.empDetail.id = detail.id;
     this.addadmin.controls['name'].setValue(detail.name);
     this.addadmin.controls['code'].setValue(detail.empcode)
     this.addadmin.controls['mail'].setValue(detail.email)
-    // this.getAllEmpDetail();
+    this.getAllEmpDetail();
   }
 
   // put updated information
   editAdmin(){
-    // this.encryptt();
+    this.encryptt();
     // this.decryptt();
     // console.log(this.decrypt);
-    
-    this.getAllEmpDetail();
     const updateAdmin ={ name : this.decrypt, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
     this.service.putAdmin(updateAdmin,this.empDetail.id).subscribe(data=>{
     alert("successfully updated!!")
       this.getAllEmpDetail();
+      // this.getAllEmpDetail();
     });
     
   }
@@ -113,27 +113,13 @@ export class AdminComponent implements OnInit {
     
   // get
     getAllEmpDetail(){
+      // this.decryptt();
       this.service.getAdmin().subscribe(data=>{
        
         this.empDetail=data;
-        this.encryptt();
-      //   for(let i=0;i<data.length;i++){
-      //     if(this.addadmin.get('mail')?.value==data[i].email){
-          
-      //     this.log=true;
-      //     }
-      //   }
-      //     if(this.log){
-            
-      //       this.service.postadmin(data).subscribe(res=>{
-      //         console.log(this.encryptt());
-      //       })
-      //     }
-      //     else{
-      //       console.log('error');
-      //    }
-      //    this.empDetail=data;
-      // });
+        for(let det of this.empDetail){
+         det.name= this.decryptt(det.name);
+        }
           
          })
 

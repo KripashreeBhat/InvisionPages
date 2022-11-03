@@ -6,73 +6,21 @@
       "id": 1
     },
     {
-      "password": "kripa",
+      "password": "puttur",
       "name": "kripa",
       "id": 2
+    },
+    {
+      "password": "ross",
+      "name": "rachel",
+      "id": 3
     }
   ],
   "admin": [
     {
-      "name": "U2FsdGVkX1+vai+JT2482r53QImPAB1zWsllVMR++mU=",
-      "empcode": "10",
-      "email": "p.com",
+      "empcode": "tytyiuyeee",
+      "email": "66",
       "id": 1
-    },
-    {
-      "name": "U2FsdGVkX1/57EhR4+tdT9JWYWvRzVr5B+dxlYd4kyQ=",
-      "empcode": "kari",
-      "email": "87897978",
-      "id": 3
-    },
-    {
-      "name": "U2FsdGVkX1+4lNUM2Z0uwDuCJEF1oBvmO/kQpek5T7w=",
-      "empcode": "harry786",
-      "email": "harrryy.com",
-      "id": 6
-    },
-    {
-      "name": "U2FsdGVkX1/BOKqZYrHxHCu+sIInV8ENg8mz3WujcCU=",
-      "empcode": "lol9090",
-      "email": "lol.com",
-      "id": 7
-    },
-    {
-      "name": "U2FsdGVkX1+9Xryp0XfTLPwEMrIZSu05vrG7hy71F90=",
-      "empcode": "iuuio",
-      "email": "hkjhuausb",
-      "id": 8
-    },
-    [
-      {
-        "name": "U2FsdGVkX1+vai+JT2482r53QImPAB1zWsllVMR++mU=",
-        "empcode": "10",
-        "email": "p.com",
-        "id": 1
-      },
-      {
-        "name": "U2FsdGVkX1/57EhR4+tdT9JWYWvRzVr5B+dxlYd4kyQ=",
-        "empcode": "kari",
-        "email": "87897978",
-        "id": 3
-      },
-      {
-        "name": "U2FsdGVkX1+4lNUM2Z0uwDuCJEF1oBvmO/kQpek5T7w=",
-        "empcode": "harry786",
-        "email": "harrryy.com",
-        "id": 6
-      },
-      {
-        "name": "U2FsdGVkX1/BOKqZYrHxHCu+sIInV8ENg8mz3WujcCU=",
-        "empcode": "lol9090",
-        "email": "lol.com",
-        "id": 7
-      },
-      {
-        "name": "U2FsdGVkX1+9Xryp0XfTLPwEMrIZSu05vrG7hy71F90=",
-        "empcode": "iuuio",
-        "email": "hkjhuausb",
-        "id": 8
-      }
-    ]
+    }
   ]
 }

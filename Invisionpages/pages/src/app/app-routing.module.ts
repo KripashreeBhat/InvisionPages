@@ -4,13 +4,14 @@ import { AdminComponent } from './admin/admin.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { EmailCheckComponent } from './email-check/email-check.component';
 import { LoginComponent } from './login/login.component';
+import { PermissionGuard } from './permission.guard';
 import { PptComponent } from './ppt/ppt.component';
 import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path : " ",redirectTo:'/login', pathMatch:'full'},
   { path : "login", component:LoginComponent},
   { path : "email", component: EmailCheckComponent},
-  { path: "profile", component:ProfileComponent},
+  { path: "profile", component:ProfileComponent, canActivate:[PermissionGuard]},
   { path: "changepassword", component:ChangepasswordComponent},
   { path: "ppt", component:PptComponent}
 ];

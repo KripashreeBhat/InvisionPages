@@ -15,26 +15,44 @@ interface admin extends Array <admin[]>{
   id:number;
  
 }
+
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
-
+  local:any;
   constructor(private http:HttpClient) { }
+  
+//  Permission guard
+  isLogedIn(){
+    this.local= localStorage.getItem('name') 
+    console.log(this.local);
+    
+    if(this.local)
+  {
+      return true;
+    }
+    else{
+
+      return false;
+    }
+    
+    
+  }
 
   getUser():Observable<login[]>{
     return this.http.get<login[]>('http://localhost:3000/logindetail');
   }
  
-  putUser(data:any):Observable<login[]>{
-  return this.http.put<login[]>('http://localhost:3000/logindetail/2',data);
+  putUser(data:any,id:number):Observable<login[]>{
+  return this.http.put<login[]>('http://localhost:3000/logindetail/'+id,data);
 }
 
   postadmin(data:any):Observable<admin[]>{
     return this.http.post<admin[]>('http://localhost:3000/admin',data);
 } 
 
-getAdmin():Observable<admin[]>{
+ getAdmin():Observable<admin[]>{
   return this.http.get<admin[]>('http://localhost:3000/admin');
 }
 

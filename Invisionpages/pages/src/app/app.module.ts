@@ -17,6 +17,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminAddComponent } from './admin-add/admin-add.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PermissionGuard } from './permission.guard';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule 
     
   ],
-  providers: [],
+  providers: [PermissionGuard],
   bootstrap: [AppComponent],
   
 })
