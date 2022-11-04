@@ -45,7 +45,7 @@ export class ServicesService {
   }
  
   putUser(data:any,id:number):Observable<login[]>{
-  return this.http.put<login[]>('http://localhost:3000/logindetail/'+id,data);
+  return this.http.put<login[]>('http://localhost:3000/logindetail/1',data);
 }
 
   postadmin(data:any):Observable<admin[]>{

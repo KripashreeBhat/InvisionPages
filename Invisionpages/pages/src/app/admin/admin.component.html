@@ -16,8 +16,8 @@
             <input matInput formControlName="mail" placeholder="Enter Mail ID">
         </mat-form-field>
 
-        <div class="btn">
-            <button mat-fab (click)="addAdmin()" >
+        <div class="btn" *ngIf = "display">
+            <button mat-fab (click)="addAdmin()"  >
               <mat-icon>add</mat-icon>
             </button>
           </div>
@@ -49,7 +49,7 @@
 
         <div class="btn">
             <button mat-fab >
-              <mat-icon   (click)="edit(detail)"class="icon">edit</mat-icon>
+              <mat-icon   (click)="edit(detail)" class="icon">edit</mat-icon>
               
             
             </button>
@@ -68,7 +68,7 @@
             
         </div>
         <div class=" downbtn spacebtn">
-            <button (click)='editAdmin()' class="label " > Update </button>
+            <button (click)='updateAdmin()' class="label " > Update </button>
             
         </div> 
     
