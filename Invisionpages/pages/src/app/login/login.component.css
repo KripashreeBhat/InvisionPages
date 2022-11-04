@@ -68,7 +68,7 @@ img{
 
   @media(max-width:500px){
     body{
-      height: 100vh;
+      height: 1000vh;
     }
     
     .container{

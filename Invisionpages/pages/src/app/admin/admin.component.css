@@ -108,3 +108,10 @@
 .icon{
     font-size: 18px;
 }
+.scroll{
+    height: 155px;
+    overflow-y: scroll;
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+}

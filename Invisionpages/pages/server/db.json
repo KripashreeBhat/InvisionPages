@@ -1,20 +1,27 @@
 {
   "logindetail": [
     {
-      "password": "krish",
+      "password": "1910",
       "name": "kripa",
       "id": 1
     },
     {
-      "password": "puttur",
-      "name": "kripa",
+      "password": "1910",
+      "name": "k",
       "id": 2
     },
     {
       "password": "ross",
-      "name": "rachel",
+      "name": "Rachel Green",
       "id": 3
     }
   ],
-  "admin": []
+  "admin": [
+    {
+      "name": "tanujaaaa",
+      "empcode": "",
+      "email": "",
+      "id": 1
+    }
+  ]
 }

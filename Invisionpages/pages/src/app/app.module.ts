@@ -18,6 +18,7 @@ import { AdminAddComponent } from './admin-add/admin-add.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PermissionGuard } from './permission.guard';
+import { NobackAuthGuard } from './noback-auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { PermissionGuard } from './permission.guard';
     HttpClientModule 
     
   ],
-  providers: [PermissionGuard],
+  providers: [PermissionGuard,NobackAuthGuard],
   bootstrap: [AppComponent],
   
 })

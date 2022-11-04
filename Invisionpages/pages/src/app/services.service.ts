@@ -25,19 +25,22 @@ export class ServicesService {
   
 //  Permission guard
   isLogedIn(){
-    this.local= localStorage.getItem('name') 
-    console.log(this.local);
+    return !!localStorage.getItem('name') 
+    // console.log(this.local);
     
-    if(this.local)
-  {
-      return true;
-    }
-    else{
+  //   if(this.local)
+  // {
+  //     return true;
+  //   }
+  //   else{
 
-      return false;
-    }
+  //     return false;
+  //   }
     
     
+  }
+  isLoggedout(){
+    return !!localStorage.getItem('name')
   }
 
   getUser():Observable<login[]>{
@@ -45,7 +48,7 @@ export class ServicesService {
   }
  
   putUser(data:any,id:number):Observable<login[]>{
-  return this.http.put<login[]>('http://localhost:3000/logindetail/1',data);
+  return this.http.put<login[]>('http://localhost:3000/logindetail/'+id,data);
 }
 
   postadmin(data:any):Observable<admin[]>{

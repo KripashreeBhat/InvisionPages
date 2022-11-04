@@ -63,9 +63,9 @@ export class AdminComponent implements OnInit {
     // console.log(this.encrypt);
     // this.decryptt();
     // console.log(this.decrypt);
+    // const superAdmin = { name: this.encrypt, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
     
    
-    // const superAdmin = { name: this.encrypt, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
     const superAdmin = { name: this.addadmin.get('name')?.value, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
     this.service.postadmin(superAdmin).subscribe(data=>{
       alert('successfully added')
@@ -74,6 +74,7 @@ export class AdminComponent implements OnInit {
     },err=>{alert('Something went wrong, try again!')});
    
   }
+      
 
   edit(detail:any){
     // this.encryptt();
@@ -83,7 +84,7 @@ export class AdminComponent implements OnInit {
     this.addadmin.controls['name'].setValue(detail.name);
     this.addadmin.controls['code'].setValue(detail.empcode)
     this.addadmin.controls['mail'].setValue(detail.email)
-    this.getAllEmpDetail();
+    // this.getAllEmpDetail();
   }
 
   // put updated information
@@ -94,11 +95,11 @@ export class AdminComponent implements OnInit {
     // console.log(this.decrypt);
     // const updateAdmin ={ name : this.decrypt, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
     const updateAdmin ={ name : this.addadmin.get('name')?.value, empcode: this.addadmin.get('code')?.value, email: this.addadmin.get('mail')?.value}
-    // this.service.putAdmin(updateAdmin,this.empDetail.id).subscribe(data=>{
-    this.service.putAdmin(updateAdmin,this.empDetail.id).subscribe(data=>{ 
+    this.service.putAdmin(updateAdmin,this.empDetail.id).subscribe(data=>{
     alert("successfully updated!!");
       this.getAllEmpDetail();
-    },err=>{ alert('Something went wrong, try again!') });
+    },
+    err=>{ alert('Something went wrong, try again!') } );
    
   }
       
@@ -109,7 +110,8 @@ export class AdminComponent implements OnInit {
       alert("Are you sure ?");
       this.getAllEmpDetail();
       // alert('succesfully deleted!!');
-    },err=>{alert('Something went wrong, try again!')}
+    },
+    err=>{alert('Something went wrong, try again!')}
     );
   }
   
@@ -124,12 +126,7 @@ export class AdminComponent implements OnInit {
       },err=>{alert('Something went wrong, try again!')})
      }
    }
-          
-       
 
-        
-        
-        
     
    
   

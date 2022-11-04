@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { AdminAddComponent } from '../admin-add/admin-add.component';
 import { AdminComponent } from '../admin/admin.component';
+import { ServicesService } from '../services.service';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -12,7 +13,8 @@ export class ProfileComponent implements OnInit {
   quesionnaire! : FormGroup;
   // additional! : FormGroup;
   display=false;
-  constructor(private fb : FormBuilder, private dialog : MatDialog ) { }
+  empname:any;
+  constructor(private fb : FormBuilder, private dialog : MatDialog ,private sevice : ServicesService) { }
  get form(){
   return this.quesionnaire.get;
  }
@@ -61,4 +63,10 @@ export class ProfileComponent implements OnInit {
 
     });
   }
+  displayName(){
+    this.sevice.getUser().subscribe(data=>{
+     this.empname = data;
+    })
+  }
+
 }
