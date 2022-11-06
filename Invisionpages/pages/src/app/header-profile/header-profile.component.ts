@@ -7,7 +7,6 @@ import { ServicesService } from '../services.service';
 })
 export class HeaderProfileComponent implements OnInit {
  empname:any;
- str:any
   constructor(private sevice : ServicesService) { }
 
   ngOnInit(): void {

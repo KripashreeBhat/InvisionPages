@@ -1,13 +1,13 @@
 {
   "logindetail": [
     {
-      "password": "1910",
-      "name": "kripa",
+      "password": "hithz",
+      "name": "Kripa",
       "id": 1
     },
     {
       "password": "1910",
-      "name": "k",
+      "name": "Aayush",
       "id": 2
     },
     {
@@ -18,9 +18,9 @@
   ],
   "admin": [
     {
-      "name": "tanujaaaa",
-      "empcode": "",
-      "email": "",
+      "name": "kannika",
+      "empcode": "00000",
+      "email": "kannu@gmain.comxffgs",
       "id": 1
     }
   ]
