@@ -24,7 +24,7 @@ p{
 .container{
     margin:auto;
     width:100%;
-    overflow:auto;
+    /* overflow:auto; */
     padding:0 10rem;
 }
 
@@ -61,18 +61,40 @@ p{
 /* #showcase{
     position: relative;
 } */
-#showcase{
+
+.showcase{
     background: url('https://www.bing.com/th?id=OIP.UsxFP3BbvEc-5jWsB8d9pQHaFA&w=304&h=205&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2') no-repeat center center/cover;
     height:60vh;
-    opacity: 0.7;
+    position:relative;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.7; */
 }
-#showcase .showcase-content{
+.showcase::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+     /* opacity: 0.7; */
+    background: rgba(0,0,0,0.6);
+   
+}
+.showcase *{
+    z-index:10;
+}
+
+.showcase .showcase-content {
     color:#fff;
     text-align:center;
     padding-top: 10rem;
+    z-index: 10;
 
 }
-#showcase .showcase-content h1{
+.showcase .showcase-content h1{
     font-size:250%;
     line-height:1.5rem;
 }
@@ -82,7 +104,7 @@ p{
 .lead{
     font-size:100%;
 }
-#showcase .showcase-content p{
+.showcase .showcase-content p {
     padding-bottom:1.5rem;
     line-height:1.4rem;
 }
@@ -106,7 +128,7 @@ p{
 
 #home-info{
     height:42vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #home-info .info-img{
     float:left;
@@ -141,13 +163,13 @@ p{
 }
 
  .box{
-    float:left;
-    width:33.3%;
-    /* margin-top: -200px; */
+    /* float:left; */
+    /* width:33.3%; */
+    /* margin-top: -0px; */
     /* padding-top: 10%; */
     padding:2rem;
     text-align: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .box i{
@@ -162,6 +184,13 @@ p{
 }
 .clr{
     clear:both;
+}
+
+.features{
+    display:grid;
+    grid-template-columns: repeat(3,33.3%);
+
+ 
 }
 
 @media(min-width:375px) and (max-width:768px){
@@ -189,17 +218,21 @@ p{
         float:none;
         width:100%;
     }
-    .box{
-        float:none;
+    .features{
+        grid:none;
         width:100%;
     }
-    #showcase .showcase-content{
+    .box{
+        /* display: flex; */
+       
+    }
+    .showcase .showcase-content{
         color:#fff;
         text-align:center;
         padding-top: 2rem;
     
     }
-    #showcase .showcase-content h1{
+    .showcase .showcase-content h1{
         font-size:200%;
         line-height:2.5rem;
     }
@@ -207,7 +240,7 @@ p{
     .lead{
         font-size:100%;
     }
-    #showcase .showcase-content p{
+    .showcase .showcase-content p{
         padding-bottom:1.5rem;
         line-height:1.4rem;
     }

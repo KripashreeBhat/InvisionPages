@@ -11,17 +11,29 @@
       "id": 2
     },
     {
-      "password": "ross",
+      "password": "rachel",
       "name": "Rachel Green",
       "id": 3
     }
   ],
   "admin": [
     {
-      "name": "kannika",
-      "empcode": "00000",
-      "email": "kannu@gmain.comxffgs",
-      "id": 1
+      "name": "rajni kanth",
+      "empcode": "4434",
+      "email": "gdfg d",
+      "id": 2
+    },
+    {
+      "name": "wsearf",
+      "empcode": "rterg",
+      "email": "gcv",
+      "id": 3
+    },
+    {
+      "name": "karthik",
+      "empcode": "12345",
+      "email": "karthik@gmail.com",
+      "id": 4
     }
   ]
 }

@@ -14,7 +14,7 @@ export class NobackAuthGuard implements CanActivate {
     return this.route.parseUrl('profile');
     // route: ActivatedRouteSnapshot,
     // state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    }
+  }
    
   }
   

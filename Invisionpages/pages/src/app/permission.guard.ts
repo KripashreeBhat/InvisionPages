@@ -26,7 +26,7 @@ export class PermissionGuard implements CanActivate {
     }
     else{
       this.route.navigate(['login']);
-      window.alert('permission denied, You have not logged In');
+      alert('permission denied, You have not logged In');
       // return true;
       return false;
       
